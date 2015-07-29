@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>MoneyStream - Found Money Connect Accounts</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <meta name="author" content="PlusOne Financial, Inc.">
+        <meta name="description" content="A better way to stay on top of your money and bills.">
+        <title>MoneyStream - Stay on top of your money.</title>
+
+        <!-- the good stuff -->
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/underscore-min.js"></script>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-dialog.min.css" rel="stylesheet">
+        <link href="fa4/css/font-awesome.min.css" rel="stylesheet">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-dialog.min.js"></script>
+
+        <!-- Custom styles -->
+        <!--<link rel="stylesheet" href="css/index.css"/>-->
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="../js/html5shiv.min.js"></script>
+        <script src="../js/respond.min.js"></script>
+        <![endif]-->
+        <style>
+            section {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                position: relative;
+            }
+            .info {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                font-size: 12px;
+                font-weight: 300;
+                font-family: monospace;
+                background: white;
+                padding: 6px;
+                border: 1px solid gray;
+                z-index: 100;
+                opacity: 0.5;
+            }
+            section *:hover .info {
+                z-index: 200;
+                opacity: 1;
+            }
+            hr {
+                margin-top: 26px;
+                margin-bottom: 26px;
+            }
+            section + section {
+                margin-top: 65px;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <h1>h1 Test</h1>
+            <hr/>
+            <h2>h2 Test</h2>
+            <hr/>
+            <h3>h3 Test</h3>
+            <hr/>
+            <h4>h4 Test</h4>
+            <hr/>
+            <h5>h5 Test</h5>
+            <hr/>
+            <h6>h6 Test</h6>
+        </section>
+        <section>
+            <div class="alert alert-success"><p>Alert Success</p></div>
+            <div class="alert alert-warning"><p>Alert Warning</p></div>
+            <div class="alert alert-danger"><p>Alert Danger</p></div>
+            <div class="alert alert-info"><p>Alert Info</p></div>
+        </section>
+    </body>
+    <script>
+        $('h1, h2, h3, h4, h5, h6').each(function(){
+            var it = $(this);
+            var info = $('<div class="info">').appendTo(it);
+            $.each(['font-size', 'font-family', 'font-weight'],function(n,v){
+                $('<div>').append(v + ' : ' + it.css(v)).appendTo(info);
+            });
+        });
+        $('.alert').each(function(){
+            var it = $(this);
+            $.each(['font-size', 'font-family', 'font-weight', 'background', 'border' ], function(n,v){
+
+                $(it).append(v + ':' + it.css(v) + ' ');
+            });
+        });
+    </script>
+</html>
