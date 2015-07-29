@@ -96,7 +96,7 @@
         });
         $('.alert').each(function(){
             var it = $(this);
-            $.each(['font-size', 'font-family', 'font-weight', 'background', 'border' ], function(n,v){
+            $.each(['font-size', 'font-family', 'font-weight', 'background', 'border', 'color' ], function(n,v){
 
                 $(it).append(v + ':' + it.css(v) + ' ');
             });
