@@ -2,7 +2,6 @@
 <html lang="en-US">
     <head lang="en">
         <meta charset="UTF-8">
-        <title>MoneyStream - Found Money Connect Accounts</title>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +35,7 @@
                 max-width: 700px;
                 margin: 0 auto;
             }
-            h1, h2, h3, h4, h5, h6 {
+            h1, h2, h3, h4, h5, h6, .h0 {
                 position: relative;
             }
             .info {
@@ -78,6 +77,9 @@
             <h5>h5 Test</h5>
             <hr/>
             <h6>h6 Test</h6>
+            <hr/>
+            <div class="h0">body text Test</div>
+            <hr/>
         </section>
         <section>
             <div class="alert alert-success"><p>Alert Success</p></div>
@@ -87,7 +89,7 @@
         </section>
     </body>
     <script>
-        $('h1, h2, h3, h4, h5, h6').each(function(){
+        $('h1, h2, h3, h4, h5, h6, .h0').each(function(){
             var it = $(this);
             var info = $('<div class="info">').appendTo(it);
             $.each(['font-size', 'font-family', 'font-weight'],function(n,v){
